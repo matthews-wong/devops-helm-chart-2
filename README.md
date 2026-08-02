@@ -6,3 +6,13 @@ A lightweight, production-ready Helm chart for deploying microservices with stri
 - Minimal resource footprints with configurable CPU/memory limits.
 - Robust health checks (readiness and liveness probes).
 - Configurable service and ingress parameters.
+- Built-in horizontal pod autoscaling.
+
+## Configuration
+
+| Parameter | Description | Default |
+| :--- | :--- | :--- |
+| `replicaCount` | Number of replicas | `2` |
+| `image.repository` | Container image repository | `nginx` |
+| `resources.limits.cpu` | CPU limit | `200m` |
+| `autoscaling.enabled` | Enable HPA | `false` |
