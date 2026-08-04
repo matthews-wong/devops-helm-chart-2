@@ -9,6 +9,13 @@ service:
   type: ClusterIP
   port: 80
 
+# Prometheus ServiceMonitor configuration
+monitoring:
+  enabled: false
+  interval: 30s
+  namespace: ""
+  labels: {}
+
 # Production readiness resource baseline
 resources:
   limits:
